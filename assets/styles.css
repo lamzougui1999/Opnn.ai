@@ -1,0 +1,135 @@
+:root{
+  --bg1:#090d17;
+  --bg2:#0e1630;
+  --glass: rgba(255,255,255,0.08);
+  --glass-strong: rgba(255,255,255,0.14);
+  --text:#e7f7f7;
+  --muted:#b9d7d7;
+  --primary:#00FFE5;
+  --primary-2:#79fff7;
+  --shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 10% 0%, #0a1229, transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, #111c3b, transparent 55%),
+              linear-gradient(135deg, var(--bg1), var(--bg2));
+  overflow-x:hidden;
+}
+
+canvas#stars{position:fixed; inset:0; z-index:-1;}
+
+a{color:var(--primary)}
+a:hover{color:var(--primary-2)}
+
+.site-wrap{position:relative;}
+
+.nav{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-inner{
+  max-width:1200px; margin:0 auto; padding:10px 18px;
+  display:flex; align-items:center; gap:16px; justify-content:space-between;
+}
+.brand{display:flex; align-items:center; gap:10px}
+.brand img{height:34px; width:auto}
+.brand span{letter-spacing:1px; font-weight:700}
+
+.btn{
+  appearance:none; border:none; cursor:pointer; text-decoration:none;
+  background:linear-gradient(135deg, var(--primary), #35ffe8);
+  color:#001416; font-weight:800; padding:12px 18px; border-radius:10px;
+  box-shadow: 0 6px 18px rgba(0,255,229,0.25);
+  transition: transform .15s ease, box-shadow .25s ease;
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,255,229,0.35); }
+.btn.ghost{
+  background:transparent; color:var(--primary); border:1px solid rgba(0,255,229,0.4);
+}
+
+.hero{
+  padding:90px 18px 40px;
+  max-width:1200px; margin:0 auto; text-align:center;
+}
+.hero h1{
+  font-size: clamp(30px, 5vw, 56px);
+  line-height:1.05; margin:0 0 16px;
+  text-shadow: 0 0 40px rgba(0,255,229,0.35);
+}
+.hero p{color:var(--muted); font-size: clamp(16px, 2.3vw, 20px)}
+
+.hero-cta{margin-top:28px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+
+.section{
+  padding:60px 18px; max-width:1200px; margin:0 auto;
+}
+
+.grid{
+  display:grid; grid-template-columns: repeat(12, 1fr); gap:18px;
+}
+.card{
+  grid-column: span 6;
+  background: var(--glass);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px; padding:22px; box-shadow: var(--shadow);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.card:hover{ transform: translateY(-4px); border-color: rgba(0,255,229,0.35); }
+.card h3{margin-top:0; color:var(--primary)}
+
+@media(max-width:800px){
+  .card{grid-column: 1 / -1;}
+}
+
+.kwc{
+  margin-top:20px; padding:20px;
+  background: var(--glass);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px; box-shadow: var(--shadow);
+  color:var(--muted)
+}
+
+.cta-bar{
+  margin-top:32px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
+}
+
+.badges{
+  margin-top:26px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
+}
+.badge{
+  padding:8px 12px; border-radius:999px; font-size:14px;
+  background: rgba(0,255,229,0.12);
+  border:1px solid rgba(0,255,229,0.35);
+  color:var(--primary-2);
+}
+
+.footer{
+  margin-top:60px; padding:30px 18px; text-align:center;
+  color:#a7caca; font-size:14px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.45));
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.notice{
+  margin-top:12px; font-size:12px; color:#9dcaca;
+  opacity:0.9;
+}
+.small{font-size:12px; color:#9bd6d6}
+
+.sep{
+  width:100%; height:1px; background: linear-gradient(90deg, transparent, rgba(0,255,229,0.4), transparent);
+  margin:26px 0;
+}
+
+/* Accessibility helpers */
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;}
+:focus-visible{outline:2px dashed var(--primary); outline-offset:3px}

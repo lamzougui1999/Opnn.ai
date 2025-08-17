@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60" role="img" aria-label="OPNN.AI Logo">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFE5"/>
+      <stop offset="100%" stop-color="#7AFBFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="220" height="60" rx="12" fill="url(#g)" opacity="0.08"/>
+  <g fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 42 Q10 30 20 18 Q30 6 44 18 Q54 28 44 42 Q34 54 20 42Z"/>
+    <path d="M70 15 L70 45 Q70 53 78 53 Q86 53 86 45 L86 15"/>
+    <path d="M106 15 L106 45 Q106 53 114 53 Q122 53 122 45 L122 15"/>
+    <path d="M152 15 L152 45 L170 27 L170 45"/>
+    <path d="M190 40 L206 40"/>
+  </g>
+  <text x="12" y="55" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#9FF9FF" opacity="0.9">OPNN.AI</text>
+</svg>
